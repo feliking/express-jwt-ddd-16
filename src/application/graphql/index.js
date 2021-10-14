@@ -5,7 +5,7 @@ const { loadGraphqlFile } = require('../lib/util');
 
 module.exports = (services) => {
   // Load schemes, resolvers, queries and mutations
-  const files = loadGraphqlFile(__dirname, { exclude: [ 'index.js', 'scalars.js', 'server.js' ] }, services);
+  const files = loadGraphqlFile(__dirname, { exclude: [ 'index.js', 'scalars.js', 'server.js', 'develop.js' ] }, services);
 
   return {
     schemes: files.schemas,

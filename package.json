@@ -8,6 +8,7 @@
     "start-dev": "DEBUG=app:* nodemon src/application/server",
     "startdev": "DEBUG=app:* nodemon src/application/server",
     "dev": "DEBUG=app:* nodemon src/application/server",
+    "graphql": "DEBUG=app:* nodemon src/application/develop",
     "secure": "NODE_ENV=secure DEBUG=app:* nodemon src/application/server",
     "test": "npm run setup && npm run seeders && npm run test-db && npm run test-domain",
     "test-db": "ava src/infrastructure/tests/ --verbose",
