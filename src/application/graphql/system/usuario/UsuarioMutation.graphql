@@ -1,0 +1,8 @@
+# Agregar usuario
+usuarioAdd(usuario: NewUsuario): Usuario
+# Editar usuario
+usuarioEdit(id: ID!, usuario: EditUsuario): Usuario
+# Editar usuario
+usuarioUpdate(id: ID!, usuario: EditUsuario): Usuario
+# Eliminar usuario
+usuarioDelete(id: ID!): Delete

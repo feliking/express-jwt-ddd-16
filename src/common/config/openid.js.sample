@@ -1,0 +1,51 @@
+'use strict';
+
+const openid = {
+  // issuer server openid connect
+  issuer: 'https://account-idetest.agetic.gob.bo',
+  // response registry client
+  client: {
+    'application_type': 'web',
+    'grant_types': [
+      'authorization_code'
+    ],
+    'id_token_signed_response_alg': 'RS256',
+    'require_auth_time': true,
+    'response_types': [
+      'code'
+    ],
+    'subject_type': 'public',
+    'token_endpoint_auth_method': 'client_secret_basic',
+    'introspection_signed_response_alg': 'RS256',
+    'post_logout_redirect_uris': [
+      'https://localhost:8080/static/oauth/logout.html'
+    ],
+    'backchannel_logout_session_required': false,
+    'frontchannel_logout_session_required': false,
+    'authorization_signed_response_alg': 'RS256',
+    'web_message_uris': [],
+    'client_id_issued_at': 1561767260,
+    'client_id': '<client_id>',
+    'client_name': 'BaseBackend HTTPS',
+    'client_secret_expires_at': 0,
+    'client_secret': '<client_secret>',
+    'contacts': [
+      'contacto@contacto.com'
+    ],
+    'logo_uri': 'https://localhost:8080/logo',
+    'redirect_uris': [
+      'https://localhost:8080/static/oauth/login.html'
+    ],
+    'introspection_endpoint_auth_method': 'client_secret_basic',
+    'revocation_endpoint_auth_method': 'client_secret_basic',
+    'registration_client_uri': 'https://account-idetest.agetic.gob.bo/reg/23e5f71e-c5f5-4991-905d-2eaeb62ca107',
+    'registration_access_token': '<registration_access_token>'
+  },
+  // parameters registry client
+  client_params: {
+    scope: ['openid profile nombre documento_identidad fecha_nacimiento email celular']
+    // prompt: 'consent',
+  }
+};
+
+module.exports = openid;

@@ -1,0 +1,6 @@
+# Agregar rol
+rolAdd(rol: NewRol!): Rol
+# Editar rol
+rolEdit(id: ID!, rol: EditRol!): Rol
+# Eliminar rol
+rolDelete(id: ID!): Delete

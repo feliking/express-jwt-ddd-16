@@ -1,0 +1,124 @@
+# Personas del sistema
+type Persona {
+  # ID del persona
+  id: ID!
+  # nombre(s)
+  nombres: String!
+  # Primer apellido
+  primer_apellido: String
+  # Segundo apellido
+  segundo_apellido: String
+  # nombre_completo
+  nombre_completo: String
+  # tipo_documento
+  tipo_documento: TipoDocPersona
+  # tipo_documento_otro
+  tipo_documento_otro: String
+  # nro_documento
+  nro_documento: String
+  # fecha_nacimiento
+  fecha_nacimiento: Date
+  # movil
+  movil: String
+  # nacionalidad
+  nacionalidad: String
+  # pais_nacimiento
+  pais_nacimiento: String
+  # genero
+  genero: GeneroPersona
+  # Teléfono del persona
+  telefono: String
+  # Estado del persona
+  estado: EstadoPersona!
+  # observacion
+  observacion: String
+  # estado_verificacion
+  estado_verificacion: EstadoVerificacionPersona
+  # Persona que creo el registro
+  _user_created: Int
+  # Persona que actualizó el registro
+  _user_updated: Int
+  # Fecha de creación del registro
+  _created_at: Date
+  # Fecha de actualización del registro
+  _updated_at: Date
+}
+
+enum EstadoVerificacionPersona {
+  # Verificado en el SEGIP
+  VERIFICADO_SEGIP
+  # observado en el SEGIP
+  OBSERVADO_SEGIP
+  # NO EXISTE en el_SEGIP
+  NO_EXISTE_SEGIP
+  # POR VERIFICAR
+  POR_VERIFICAR
+  # VERIFICADO
+  VERIFICADO
+}
+
+# Tipos de estado del persona
+enum EstadoPersona {
+  # Persona activo
+  ACTIVO
+  # Persona inactivo
+  INACTIVO
+}
+
+enum TipoDocPersona {
+  # Cédula de identidad
+  CI
+  # Pasaporte
+  PASAPORTE
+  # Documento Extranjero
+  OTRO
+}
+enum GeneroPersona {
+  # Genero Másculino
+  M
+  # Genero Femenino
+  F
+  # Otro
+  OTRO
+}
+
+# Objeto para crear un persona
+input NewPersona {
+  nombres: String!
+  primer_apellido: String
+  segundo_apellido: String
+  nombre_completo: String
+  tipo_documento: TipoDocPersona!
+  tipo_documento_otro: String
+  nro_documento: String!
+  fecha_nacimiento: Date!
+  movil: String
+  nacionalidad: String
+  pais_nacimiento: String
+  genero: GeneroPersona
+  telefono: String
+}
+
+# Objeto para editar un persona
+input EditPersona {
+  nombres: String
+  primer_apellido: String
+  segundo_apellido: String
+  nombre_completo: String
+  tipo_documento: TipoDocPersona
+  tipo_documento_otro: String
+  nro_documento: String
+  fecha_nacimiento: Date
+  movil: String
+  nacionalidad: String
+  pais_nacimiento: String
+  genero: GeneroPersona
+  telefono: String
+  estado: EstadoPersona
+}
+
+# Objeto de paginación para persona
+type Personas {
+  count: Int
+  rows: [Persona]
+}

@@ -1,0 +1,6 @@
+# Agregar permiso
+permisoAdd(permiso: NewPermiso!): Permiso
+# Editar permiso
+permisoEdit(id: ID!, permiso: EditPermiso!): Permiso
+# Eliminar permiso
+permisoDelete(id: ID!): Delete

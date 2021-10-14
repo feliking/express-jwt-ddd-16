@@ -1,0 +1,3 @@
+# Obtener la validación de un model de un context
+
+GET http://localhost:3000/api/public/validation?context=system&model=usuario HTTP/1.1

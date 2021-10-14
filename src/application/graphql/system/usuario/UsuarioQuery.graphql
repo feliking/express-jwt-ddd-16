@@ -1,0 +1,24 @@
+# Lista de usuarios
+usuarios(
+  # Límite de la consulta para la paginación
+  limit: Int
+  # Nro. de página para la paginación
+  page: Int
+  # Campo a ordenar, "-campo" ordena DESC
+  order: String
+  # Buscar por usuario
+  usuario: String,
+  # Buscar por email
+  email: String,
+  # Buscar por nombre completo
+  nombre_completo: String,
+  # Buscar por estado
+  estado: EstadoUsuario,
+  # Buscar por ID rol
+  id_rol: ID,
+  # Buscar por ID entidad
+  id_entidad: ID
+): Usuarios
+# Obtener un usuario
+usuario(id: ID!): Usuario
+usuarioOnlyToken(id: ID!): Usuario

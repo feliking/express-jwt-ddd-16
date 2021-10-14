@@ -1,0 +1,11 @@
+# Lista de roles
+roles(
+  # Límite de la consulta para la paginación
+  limit: Int
+  # Nro. de página para la paginación
+  page: Int
+  # Campo a ordenar, "-campo" ordena DESC
+  order: String,
+): Roles
+# Obtener un rol
+rol(id: ID!): Rol

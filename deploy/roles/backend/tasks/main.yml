@@ -1,0 +1,34 @@
+---
+- include: deps.yml
+- name: Copy Backend
+  copy:
+    src=base-backend
+    dest=/usr/local/src
+    mode=u=rwx,g=rwx,o=rx
+- name: Run npm install
+  command: npm install
+    chdir=/usr/local/src/base-backend
+    creates=/usr/local/src/base-backend/node_modules
+- name: Setup Database
+  command: npm run setup -- --yes
+    chdir=/usr/local/src/base-backend
+- name: Setup Seeders
+  command: npm run seeders-prod
+    chdir=/usr/local/src/base-backend
+- name: Install systemd script
+  copy:
+    src=backend-admin.service
+    dest=/lib/systemd/system
+- name: Install nginx config
+  copy:
+    src=backend-admin.conf
+    dest=/etc/nginx/sites-enabled
+- name: Start backend-admin
+  service:
+    name=backend-admin
+    state=restarted
+    enabled=yes
+- name: Restart nginx
+  service:
+    name=nginx
+    state=reloaded

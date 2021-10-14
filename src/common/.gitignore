@@ -1,0 +1,5 @@
+node_modules/
+.vscode/
+yarn-error.log
+npm-debug.log
+alias.sh

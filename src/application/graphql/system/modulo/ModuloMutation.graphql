@@ -1,0 +1,6 @@
+# Agregar modulo
+moduloAdd(modulo: NewModulo!): Modulo
+# Editar modulo
+moduloEdit(id: ID!, modulo: EditModulo!): Modulo
+# Eliminar modulo
+moduloDelete(id: ID!): Delete

@@ -1,0 +1,21 @@
+# Lista de modulos
+modulos(
+  # Límite de la consulta para la paginación
+  limit: Int
+  # Nro. de página para la paginación
+  page: Int
+  # Campo a ordenar, "-campo" ordena DESC
+  order: String
+  # Buscar por label
+  label: String
+  # Buscar por estado
+  estado: EstadoModulo
+  # Buscar por visible
+  visible: Boolean
+  # Buscar por módulo
+  id_modulo: ID
+  # Buscar por sección
+  id_seccion: ID
+): Modulos
+# Obtener un modulo
+modulo(id: ID!): Modulo

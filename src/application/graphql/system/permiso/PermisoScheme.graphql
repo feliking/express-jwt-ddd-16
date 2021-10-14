@@ -1,0 +1,64 @@
+# Escalar tipo Fecha
+# Permisos del sistema
+type Permiso {
+  # ID del Permiso
+  id: ID!
+  # create de Permiso
+  create: Boolean!
+  # read de Permiso
+  read: Boolean!
+  # update de Permiso
+  update: Boolean!
+  # delete de Permiso
+  delete: Boolean!
+  # firma de Permiso
+  firma: Boolean!
+  # csv de Permiso
+  csv: Boolean!
+  # id_modulo de Permiso
+  id_modulo: ID!
+  # id_rol de Permiso
+  id_rol: ID!
+  # Usuario que creo el registro
+  _user_created: Int
+  # Usuario que actualizó el registro
+  _user_updated: Int
+  # Fecha de creación del registro
+  _created_at: Date
+  # Fecha de actualización del registro
+  _updated_at: Date
+
+  # DEPENDENCIAS
+  modulo: Modulo
+  rol: Rol
+}
+
+# Objeto para crear un Permiso
+input NewPermiso {
+  create: Boolean!
+  read: Boolean!
+  update: Boolean!
+  delete: Boolean!
+  firma: Boolean!
+  csv: Boolean!
+  id_modulo: ID!
+  id_rol: ID!
+}
+
+# Objeto para editar un Permiso
+input EditPermiso {
+  create: Boolean
+  read: Boolean
+  update: Boolean
+  delete: Boolean
+  firma: Boolean
+  csv: Boolean
+  id_rol: ID
+  id_modulo: ID
+}
+
+# Objeto de paginación para Permiso
+type Permisos {
+  count: Int
+  rows: [Permiso]
+}

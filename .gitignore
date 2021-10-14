@@ -1,0 +1,23 @@
+node_modules/
+.vscode/
+yarn-error.log
+npm-debug.log
+package-lock.json
+alias.sh
+src/common/config/openid.js
+src/common/lib/event-bus
+
+logs/
+
+deploy/roles/backend/files/base-backend
+deploy/roles/frontend/files/base-backend
+
+## temporales creados por emacs
+*~
+\#*\#
+.\#*
+
+.env
+.env.local
+.env.development
+.env.production

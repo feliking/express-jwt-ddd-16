@@ -1,0 +1,12 @@
+postgresql_databases:
+  - name: database
+    owner: usuario
+    hstore: yes
+postgresql_users:
+  - name: usuario
+    pass: usuario
+    encrypted: no
+postgresql_user_privileges:
+  - name: usuario
+    db: database
+    priv: "ALL"

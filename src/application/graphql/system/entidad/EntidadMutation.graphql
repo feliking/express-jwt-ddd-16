@@ -1,0 +1,6 @@
+# Agregar entidad
+entidadAdd(entidad: NewEntidad!): Entidad
+# Editar entidad
+entidadEdit(id: ID!, entidad: EditEntidad!): Entidad
+# Eliminar entidad
+entidadDelete(id: ID!): Delete

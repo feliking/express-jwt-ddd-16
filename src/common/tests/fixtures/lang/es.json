@@ -1,0 +1,11 @@
+{
+  "hello": "Hola mundo!",
+  "error": {
+    "message": "Mensaje de error",
+    "bd": {
+      "sequelize": {
+        "name": "Base de datos"
+      }
+    }
+  }
+}
