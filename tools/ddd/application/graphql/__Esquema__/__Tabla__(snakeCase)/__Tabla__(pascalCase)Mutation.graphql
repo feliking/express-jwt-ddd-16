@@ -1,6 +1,0 @@
-# Agregar __Tabla__
-__Tabla__(camelCase)Add(__Tabla__(snakeCase): New__Tabla__(pascalCase)!): __Tabla__(pascalCase)
-# Editar __Tabla__
-__Tabla__(camelCase)Edit(id: ID!, __Tabla__(snakeCase): Edit__Tabla__(pascalCase)!): __Tabla__(pascalCase)
-# Eliminar __Tabla__
-__Tabla__(camelCase)Delete(id: ID!): Delete

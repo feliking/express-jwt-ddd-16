@@ -1,9 +1,0 @@
-# Lista de __Tabla__s
-__Tabla__(camelCase)s(
-  limit: Int
-  page: Int
-  order: String
-  # Filtros que se van a aplicar desde el frontend
-): __Tabla__(pascalCase)s
-# Obtener un objeto
-__Tabla__(camelCase)(id: ID!): __Tabla__(pascalCase)

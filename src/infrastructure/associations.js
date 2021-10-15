@@ -12,6 +12,22 @@ module.exports = function associations (models) {
     tokens
   } = models;
 
+  // Tipos de relación
+
+  // MANY TO MANY
+  // horario.belongsToMany(persona, { foreignKey: { name: 'id_horario' }, through: horario_persona, as: 'personas' });
+	// persona.belongsToMany(horario, { foreignKey: { name: 'id_persona' }, through: horario_persona, as: 'horarios' });
+	// horario_persona.belongsTo(persona, { foreignKey: { name: 'id_persona' }, as: 'personas' });
+	// persona.hasMany(horario_persona, { foreignKey: { name: 'id_persona' } });
+	// horario_persona.belongsTo(horario, { foreignKey: { name: 'id_horario' }, as: 'horarios' });
+	// horario.hasMany(horario_persona, { foreignKey: { name: 'id_horario' } });
+  
+  // ONE TO MANY
+  // horario.hasMany(horario_persona, { foreignKey: { name: 'id_horario' } });
+  
+  // MANY TO ONE
+  // horario_persona.belongsTo(horario, { foreignKey: { name: 'id_horario' }, as: 'horarios' });
+  
   // MODULO USUARIOS
   // Asociaciones tabla usuarios
   usuarios.belongsTo(entidades, { foreignKey: { name: 'id_entidad', allowNull: false }, as: 'entidad' });
