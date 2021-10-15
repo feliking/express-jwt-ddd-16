@@ -9,6 +9,10 @@
     "startdev": "DEBUG=app:* nodemon src/application/server",
     "dev": "DEBUG=app:* nodemon src/application/server",
     "graphql": "DEBUG=app:* nodemon src/application/develop",
+    "g:model": "node tools/model.js",
+    "g:model:schema": "node tools/model_schema.js",
+    "g:model:view": "node tools/model-view.js",
+    "g:migration": "node tools/migration.js",
     "secure": "NODE_ENV=secure DEBUG=app:* nodemon src/application/server",
     "test": "npm run setup && npm run seeders && npm run test-db && npm run test-domain",
     "test-db": "ava src/infrastructure/tests/ --verbose",
@@ -29,13 +33,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.agetic.gob.bo/agetic/base-backend.git"
+    "url": "https://github.com/feliking/express-jwt-ddd-16.git"
   },
   "keywords": [
     "Módulo",
     "usuario"
   ],
-  "author": "Omar Gutiérrez Condori <ogutierrez@agetic.gob.bo>",
+  "author": "Felix Antonio Mamani Quispe <felixddxd@gmail.com>",
   "license": "LPG Bolivia v1.0",
   "dependencies": {
     "amqplib": "^0.8.0",
@@ -77,6 +81,7 @@
   },
   "devDependencies": {
     "ava": "^3.15.0",
+    "generate-template-files": "^3.2.0",
     "nodemon": "^2.0.13",
     "semistandard": "^16.0.1"
   }

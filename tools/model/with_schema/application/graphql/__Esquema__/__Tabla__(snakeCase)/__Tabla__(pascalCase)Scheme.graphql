@@ -1,0 +1,34 @@
+# Definición del tipo
+type __Tabla__(pascalCase) {
+  id: ID!
+  # Campos del modelo, ejemplo: nombre: String
+  
+  # Declaración de ID's foraneos, ejemplo: id_persona: Int
+  
+  # Declaración de objetos foraneos, ejemplo: persona: Persona
+  
+  # Usuario que creo el registro
+  _user_created: Int
+  # Usuario que actualizó el registro
+  _user_updated: Int
+  # Fecha de creación del registro
+  _created_at: Date
+  # Fecha de actualización del registro
+  _updated_at: Date
+}
+
+# Crear __Tabla__
+input New__Tabla__(pascalCase) {
+  # Campos que recibiremos de la capa de presentación
+}
+
+# Editar __Tabla__
+input Edit__Tabla__(pascalCase) {
+  # Campos que recibiremos de la capa de presentación
+}
+
+# Paginación
+type __Tabla__(pascalCase)s {
+  count: Int
+  rows: [__Tabla__(pascalCase)]
+}

@@ -122,6 +122,10 @@ const timestamps = {
   _updated_at: {
     type: Sequelize.DATE,
     xlabel: lang.t('fields._updated_at')
+  },
+  _deleted_at: {
+    type: Sequelize.DATE,
+    xlabel: lang.t('fields._deleted_at')
   }
 };
 

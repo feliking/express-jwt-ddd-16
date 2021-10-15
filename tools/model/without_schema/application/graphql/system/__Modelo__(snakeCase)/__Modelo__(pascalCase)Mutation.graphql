@@ -1,0 +1,6 @@
+# Agregar __Modelo__
+__Modelo__(camelCase)Add(__Modelo__(snakeCase): New__Modelo__(pascalCase)!): __Modelo__(pascalCase)
+# Editar __Modelo__
+__Modelo__(camelCase)Edit(id: ID!, __Modelo__(snakeCase): Edit__Modelo__(pascalCase)!): __Modelo__(pascalCase)
+# Eliminar __Modelo__
+__Modelo__(camelCase)Delete(id: ID!): Delete

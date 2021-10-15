@@ -1,0 +1,9 @@
+# Lista de __Modelo__s
+__Modelo__(camelCase)s(
+  limit: Int
+  page: Int
+  order: String
+  # Filtros que se van a aplicar desde el frontend
+): __Modelo__(pascalCase)s
+# Obtener un objeto
+__Modelo__(camelCase)(id: ID!): __Modelo__(pascalCase)
