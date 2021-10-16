@@ -25,17 +25,17 @@ generateTemplateFiles([
     },
   },
   {
-    option: "Generar capas de vista",
+    option: "Editar tabla",
     entry: {
-      folderPath: "./tools/dddv/",
+      folderPath: "./tools/migration/update_table",
     },
     stringReplacers: [
       {
-        question: "Nombre del esquema: ",
-        slot: "__Esquema__",
+        question: "Orden de la migración: ",
+        slot: "__Orden__",
       },
       {
-        question: "Nombre de la vista: ",
+        question: "Nombre de la tabla: ",
         slot: "__Tabla__",
       },
     ],
@@ -45,7 +45,6 @@ generateTemplateFiles([
     },
     onComplete: (results) => {
       console.log(`Archivos generados`, results.output.files);
-      console.log("Capas generadas exitosamente :)");
     },
   },
 ]);
